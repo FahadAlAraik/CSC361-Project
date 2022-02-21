@@ -10,3 +10,5 @@ print(cities_dic)
 print("fjfaslka;fa")
 #asfdadadasdadsd
 p=0
+o=0
+h=5
