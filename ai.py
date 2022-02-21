@@ -9,4 +9,4 @@ for i in range(len(exel)):
 print(cities_dic)
 print("fjfaslka;fa")
 #asfdadadasdadsd
-print("dfkljdsfsdfkljhsdlf")
+p=0
