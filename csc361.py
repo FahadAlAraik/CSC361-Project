@@ -14,12 +14,11 @@ for i in range(len(data)):
     cities_dic[data.loc[i][0]].append([data.loc[i][1], float(data.loc[i][2])])
 
 
-maxSize =0
-generatedNodes = 0
+
 def bfs(graph, start, end):
     # maintain a queue of paths
-    global maxSize
-    global generatedNodes
+    maxSize=0
+    generatedNodes=0
     queue = []
     visited = []
     # push the first path into the queue
@@ -35,7 +34,7 @@ def bfs(graph, start, end):
 
         # path found
         if node == end:
-            return path
+            return path,maxSize,generatedNodes
         # enumerate all adjacent nodes, construct a
         # new path and push it into the queue
         for adjacent in graph.get(node, []):
@@ -55,8 +54,7 @@ for adjacent in cities_dic.get('Al Hariq',[]):
         new_path.append(adjacent[0])
         queue.append(new_path)
 print(bfs(cities_dic,'Riyadh' , 'Dhurma'))
-print(maxSize)
-print(generatedNodes)
+
 
 
 
